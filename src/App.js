@@ -21,14 +21,13 @@ class App extends Component {
     })
   }
   handleSubmit() {
-    //alert(`Registered Successfully ${this.state.firstName}${this.state.LastName} You are Going to ${this.state.location}`)
-    alert("hello")
+    alert(`Registered Successfully ${this.state.firstName} ${this.state.lastName} You are Going to ${this.state.location}`)
   }
   render() {
     const { firstName, lastName, age, gender, location } = this.state
     return (
       <main>
-        <form onSubmit="this.handleSubmit">
+        <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} placeholder="First Name" name="firstName" value={firstName} /><br />
           <input onChange={this.handleChange} placeholder="Last Name" name="lastName" value={lastName} /><br />
           <input onChange={this.handleChange} placeholder="Age" name="age" value={age} /><br />
